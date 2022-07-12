@@ -1,0 +1,39 @@
+{
+    "name": "webpack-setup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "webpack-cli": "^4.10.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.6",
+        "css-loader": "^6.7.1",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-webpack-plugin": "^3.2.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss-loader": "^7.0.1",
+        "prettier": "^2.7.1",
+        "sass": "^1.53.0",
+        "sass-loader": "^13.0.2",
+        "ts-loader": "^9.3.1",
+        "typescript": "^4.7.4",
+        "webpack": "^5.73.0",
+        "webpack-dev-server": "^4.9.3"
+    },
+    "scripts": {
+        "start": "webpack serve --open",
+        "build": "webpack --mode=production --config webpack.config.js",
+        "lint": "eslint . --ext .ts",
+        "clean": "rd /s /q dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

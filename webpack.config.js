@@ -60,4 +60,8 @@ module.exports = {
             },
         ],
     },
+    devServer: {
+        hot: false, // optional, but you must not set both hot and liveReload to true
+        liveReload: true,
+    },
 };

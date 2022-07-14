@@ -29,7 +29,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: '[hash][ext][query]',
+        assetModuleFilename: './assets/[hash][ext][query]',
         filename: '[name].bundle.js',
         clean: {
             keep: /\.git/,

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let mode = 'development';
 let target = 'web';
@@ -18,6 +19,9 @@ const plugins = [
         filename: '[name].[contenthash].css',
     }),
     new ESLintPlugin(),
+    new CopyWebpackPlugin({
+        patterns: [{ from: './src/assets', to: './assets' }],
+    }),
 ];
 
 module.exports = {
@@ -29,7 +33,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: './assets/[hash][ext][query]',
+        // assetModuleFilename: './assets/[hash][ext][query]',
         filename: '[name].bundle.js',
         clean: {
             keep: /\.git/,
